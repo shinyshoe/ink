@@ -196,7 +196,8 @@ namespace Ink.Parsed
             _innerContentContainer = new Runtime.Container ();
 
             // Repeat start content by diverting to its container
-            if (startContent) {
+            //SS Edit - bjrafeld 5/24/18 - Don't repeat Start content in the inner container.
+            /**if (startContent) {
 
                 // Set the return point when jumping back into the start content
                 //  - In this case, it's the $r2 point, within the choice content "c".
@@ -215,7 +216,7 @@ namespace Ink.Parsed
                 _r2Label = new Runtime.Container ();
                 _r2Label.name = "$r2";
                 _innerContentContainer.AddContent (_r2Label);
-            }
+            }**/
 
             // Choice's own inner content
             if (innerContent) {
